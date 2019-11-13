@@ -22,9 +22,6 @@ function turnLeft(rover) {
       rover.direction = 'N';
       break;
   }
-
-
-  console.log("turnLeft was called!");
 }
 
 function turnRight(rover) {
@@ -63,15 +60,15 @@ function moveForward(rover) {
 }
 
 
-function goForward(moves) {
-  for (i = 0; i < moves.length; i++) {
-    if (moves == 'r') {
+function commands (turn) {
+  for (i = 0; i < turn.length; i++) {
+    if (turn == 'R') {
       return turnRight();
     }
-    else if (moves == 'f') {
+    else if (turn == 'F') {
       return moveForward();
     }
-    else if (moves == 'l') {
+    else if (turn == 'L') {
       return turnLeft();
     }
   }
