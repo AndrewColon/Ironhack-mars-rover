@@ -59,6 +59,24 @@ function moveForward(rover) {
   }
 }
 
+function moveBackwards(rover) {
+  switch (rover.direction) {
+    case 'N':
+      rover.y += 1;
+      break;
+    case 'S':
+      rover.y -= 1;
+      break;
+    case 'W':
+      rover.x += 1;
+      break;
+    case 'E':
+      rover.x -= 1;
+      break;
+  }
+
+}
+
 
 function commands (turn) {
   for (i = 0; i < turn.length; i++) {
